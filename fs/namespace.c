@@ -1924,6 +1924,10 @@ static int can_umount(const struct path *path, int flags)
 	return 0;
 }
 
+<<<<<<< HEAD
+=======
+// caller is responsible for flags being sane
+>>>>>>> 89e8f478b3a9 (BACKPORT: fs/namespace.c path_umount [5.10.9])
 int path_umount(struct path *path, int flags)
 {
 	struct mount *mnt = real_mount(path->mnt);
@@ -1938,6 +1942,10 @@ int path_umount(struct path *path, int flags)
 	mntput_no_expire(mnt);
 	return ret;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 89e8f478b3a9 (BACKPORT: fs/namespace.c path_umount [5.10.9])
 /*
  * Now umount can handle mount points as well as block devices.
  * This is important for filesystems which use unnamed block devices.
